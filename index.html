@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Print IT - Online Printing Services</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+      background-color: #f9f9f9;
+      line-height: 1.6;
+    }
+    header {
+      background: #601f9e;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    header .logo {
+      display: inline-flex;
+      align-items: center;
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+    header .logo svg {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+    /* Navigation Bar */
+    nav {
+      background: #D2A2F8;
+      padding: 12px 0;
+      text-align: center;
+    }
+    nav a {
+      color: #2E0854;
+      font-weight: bold;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 1.1em;
+      transition: color 0.3s ease-in-out;
+    }
+    nav a:hover {
+      color: #601f9e;
+    }
+    /* Hero Section */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h1 {
+      color: #4b0082;
+      font-size: 3.2em;
+      font-weight: bold;
+      margin: 0;
+    }
+    .container {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    /* Services Section */
+    .services h2 {
+      text-align: center;
+      color: #601f9e;
+      margin-bottom: 30px;
+    }
+    .services-grid {
+      display: flex;
+      justify-content: center; /* Center the row items */
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+    .service-card {
+      background: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      flex: 0 0 calc(20% - 10px);
+      max-width: calc(20% - 10px);
+      margin: 5px;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+    .service-card h3 {
+      color: #601f9e;
+      margin-bottom: 10px;
+    }
+    .service-card p {
+      font-size: 0.95em;
+      color: #555;
+    }
+    /* How It Works Section */
+    .how-it-works {
+      margin: 60px 0;
+    }
+    .how-it-works h2 {
+      text-align: center;
+      color: #601f9e;
+      margin-bottom: 30px;
+    }
+    .flow-container {
+      display: flex;
+      justify-content: center; /* Center the row items */
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+    .flow-step {
+      background: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      flex: 0 0 calc(25% - 10px);
+      max-width: calc(25% - 10px);
+      margin: 5px;
+    }
+    .flow-step:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+    }
+    .step-icon {
+      background: #601f9e;
+      color: #fff;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3em;
+      margin: 0 auto 10px auto;
+    }
+    .arrow {
+      font-size: 2em;
+      color: #601f9e;
+      margin: 0 5px;
+      align-self: center;
+    }
+    /* Contact Section */
+    #contact h2 {
+      text-align: center;
+      color: #601f9e;
+      margin-bottom: 20px;
+    }
+    #contact p {
+      text-align: center;
+    }
+    footer {
+      background: #601f9e;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+      .services-grid, .flow-container {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .service-card, .flow-step {
+        flex: 0 0 calc(45% - 10px);
+        max-width: calc(45% - 10px);
+      }
+      .arrow {
+        display: none;
+      }
+    }
+    @media (max-width: 600px) {
+      .service-card, .flow-step {
+        flex: 0 0 calc(100% - 10px);
+        max-width: calc(100% - 10px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header with Updated Logo -->
+  <header>
+    <div class="logo">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <!-- Paper icon with folded corner -->
+        <path d="M20,20 H65 L80,35 V85 H20 Z" fill="#fff" stroke="#601f9e" stroke-width="4"/>
+        <polygon points="65,20 80,35 65,35" fill="#601f9e"/>
+        <!-- WiFi signal element -->
+        <path d="M30 15 Q50 5, 70 15" stroke="#601f9e" stroke-width="3" fill="none"/>
+        <path d="M35 10 Q50 0, 65 10" stroke="#601f9e" stroke-width="3" fill="none"/>
+      </svg>
+      Print IT
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#how-it-works">How It Works</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Your Documents. Our Expertise.</h1>
+  </section>
+
+  <div class="container">
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>📄 Document Printing</h3>
+          <p>Experience ultra-sharp, high-quality prints for all your business and personal documents, delivered with efficiency and care.</p>
+        </div>
+        <div class="service-card">
+          <h3>🎉 Personalized Invitations</h3>
+          <p>Create unforgettable moments with custom-designed invitations featuring unique themes and personalized details tailored for every occasion.</p>
+        </div>
+        <div class="service-card">
+          <h3>📚 DTP & Binding</h3>
+          <p>Get professionally published documents, reports, and books with expert desktop publishing and binding services that add a refined touch.</p>
+        </div>
+        <div class="service-card">
+          <h3>📑 Copying & Digitization</h3>
+          <p>Transform your valuable documents with high-speed copying and advanced digitization services that ensure clarity and preservation.</p>
+        </div>
+        <div class="service-card">
+          <h3>✍️ Document Summarizing</h3>
+          <p>Simplify complex reports and lengthy documents into concise, digestible summaries, saving you time while delivering key insights.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+      <h2>How It Works</h2>
+      <div class="flow-container">
+        <div class="flow-step">
+          <div class="step-icon">1</div>
+          <h3>Upload Documents</h3>
+          <p>Submit your files easily through our user-friendly upload tool.</p>
+        </div>
+        <div class="arrow">→</div>
+        <div class="flow-step">
+          <div class="step-icon">2</div>
+          <h3>Nearest Partner</h3>
+          <p>Your work is intelligently routed to the closest trusted printing partner.</p>
+        </div>
+        <div class="arrow">→</div>
+        <div class="flow-step">
+          <div class="step-icon">3</div>
+          <h3>Job Done</h3>
+          <p>Our expert partner completes your print job with meticulous care and efficiency.</p>
+        </div>
+        <div class="arrow">→</div>
+        <div class="flow-step">
+          <div class="step-icon">4</div>
+          <h3>Delivery</h3>
+          <p>Your completed documents are swiftly delivered right to your doorstep.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Get in Touch</h2>
+      <p>Have questions or need assistance? Contact us at <a href="mailto:support@print-it.in">support@print-it.in</a>.</p>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Print IT. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
